@@ -8,7 +8,7 @@
 
 
 ```shell
-https://github.com/RoniEmad/Siemens-CleanCode-A1.git
+git clone https://github.com/RoniEmad/Siemens-CleanCode-A1.git
 cd Siemens-CleanCode-A1/
 ```
 
