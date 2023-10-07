@@ -48,21 +48,29 @@ int main () {
     int sum1 = arraySum(array, startIndex1, size);
     assert(sum1 == 20);
 
+    cout << "Test 1 passed!" << endl;
+
     // Test 2: Valid range (full array)
     int startIndex2 = 0;
     int sum2 = arraySum(array, startIndex2, size);
     assert(sum2 == 21);
+
+    cout << "Test 2 passed!" << endl;
 
     // Test 3: Valid range (just below the limit)
     int startIndex3 = size - 1;
     int sum3 = arraySum(array, startIndex3, size);
     assert(sum3 == array[size - 1]);
 
+    cout << "Test 3 passed!" << endl;
+
     // Test 4: Valid range (part of the array)
     int startIndex4 = 0;
     int size4 = 4;
     int sum4 = arraySum(array, startIndex4, size4);
     assert(sum4 == 10);
+
+    cout << "Test 4 passed!" << endl;
 
     // Test 5: Invalid range (startIndex = size)
     try{
@@ -72,7 +80,7 @@ int main () {
         assert(false);
     }
     catch(const std::invalid_argument& e) {
-        cout << e.what() << endl;
+        cout << "Test 5 passed! (" << e.what() << ")" << endl;
     }
 
     // Test 6: Invalid range (startIndex > size)
@@ -83,7 +91,7 @@ int main () {
         assert(false);
     }
     catch(const std::invalid_argument& e) {
-        cout << e.what() << endl;
+        cout << "Test 6 passed! (" << e.what() << ")" << endl;
     }
 
     // Test 7: Invalid range (size < 1)
@@ -95,7 +103,7 @@ int main () {
         assert(false);
     }
     catch(const std::invalid_argument& e) {
-        cout << e.what() << endl;
+        cout << "Test 7 passed! (" << e.what() << ")" << endl;
     }
 
     // Test 8: Invalid range (start index < 0)
@@ -106,7 +114,7 @@ int main () {
         assert(false);
     }
     catch(const std::invalid_argument& e) {
-        cout << e.what() << endl;
+        cout << "Test 8 passed! (" << e.what() << ")" << endl;
     }
 
     // Test 9: Invalid array (nullptr)
@@ -119,7 +127,7 @@ int main () {
         assert(false);
     }
     catch(const std::invalid_argument& e) {
-        cout << e.what() << endl;
+        cout << "Test 9 passed! (" << e.what() << ")" << endl;
     }
 
     std::cout << "All unit tests passed!" << std::endl;
